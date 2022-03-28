@@ -1,0 +1,6 @@
+.venv
+.env
+volumes/app/db.sqlite3
+volumes/app/config/__pycache__
+volumes/app/web/__pycache__
+
