@@ -14,4 +14,20 @@ services:
     - type: 'bind'
       source: './volumes/app'
       target: '/app'
+  nginx:
+    build: './nginx'
+    container_name: 'nginx'
+    restart: 'always'
+    # expose:
+      # - '8000'
+    ports:
+      - "80:80"
+    volumes:
+    - type: 'bind'
+      source: './volumes/media'
+      target: '/app/media'
+
+    - type: 'bind'
+      source: './volumes/static'
+      target: '/app/static'
 
